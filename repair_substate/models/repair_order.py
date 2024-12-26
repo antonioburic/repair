@@ -15,7 +15,7 @@ class BaseSubstateType(models.Model):
 
 
 class RepairOrder(models.Model):
-    _inherit = ["repair.order", "base.substate.mixin"]
+    _inherit = ["base.substate.mixin", "repair.order"]
     _name = "repair.order"
 
     @api.constrains("substate_id", "state")
